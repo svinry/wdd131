@@ -4,13 +4,15 @@
     --accent1-color: #d1d1d1;
     --accent2-color: #faf8f6;
     --heading-font: "Playfair Display", "Times New Roman", "Georgia", serif;
-    --body-font: Roboto, "Open Sans", sans-serif;;
+    --body-font: Roboto, sans-serif;;
 }
 
 * {
     margin: 0;
     padding: 0;
     font-family: var(--body-font);
+    font-weight: 400;
+    font-style: normal;
 }
 
 .container {
@@ -31,6 +33,7 @@ header span {
     padding: 1rem;
     font-family: var(--heading-font);
     font-size: 1.2rem;
+    font-weight: 700;
 }
 
 .navigation {
@@ -46,6 +49,7 @@ header span {
     color: var(--accent2-color);
     text-decoration: none;
     font-family: var(--heading-font);
+    font-weight: 500;
 }
 
 .navigation a:hover {
@@ -59,6 +63,7 @@ h1 {
     text-align: center;
     padding: 1rem 1.5rem;
     font-family: var(--heading-font);
+    font-weight: 200;
 }
 
 main {
@@ -148,7 +153,8 @@ main {
 }
 .web-dev-resources ul {
     padding: 1rem;
-    
+    display: grid;
+    gap: .5rem;
 }
 
 footer {
@@ -161,8 +167,10 @@ footer {
 footer p {
     text-align: center;
     font-family: var(--heading-font);
+    font-weight: 400;
 }
 
 #lastModified {
     font-size: .7rem;
+    font-weight: 400;
 }
