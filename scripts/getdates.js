@@ -5,4 +5,4 @@ const lastModified = document.getElementById("lastModified");
 
 
 currentYear.textContent = today.getFullYear();
-lastModified.innerHTML = `Last Modification: ${document.lastModified}`;
+lastModified.innerHTML = `Last Modification: <span>${document.lastModified}</span>`;
