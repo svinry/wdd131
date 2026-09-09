@@ -3,15 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <title>WDD 131 – Dynamic Web Fundamentals – Alvin Svinurai</title>
+    <meta name="description" content="WDD 131 – Dynamic Web Fundamentals - Alvin Svinurai. Landing page for the WDD 131 course. This page gives access to other course pages including LinkedIn, Final Project, I-Learn and scripture pages.">
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
-    <nav class="navigation">
-    <a href="index.html">Home</a>
-    <a href="products.html">Products</a>
-    <a href="services.html">Services</a>
-    </nav> 
-at nesciunt quaerat, laboriosam minima voluptas sunt, aperiam eligendi nemo ex nobis optio, necessitatibus laborum soluta esse rem excepturi magnam.
+    <div class="container">
+        <header>
+            <span class="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+            <nav class="navigation">
+                <a href="https://www.linkedin.com/in/alvin-svinurai-31250a183">LinkedIn</a>
+                <a href="https://byupw.instructure.com/">Canvas</a>
+                <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7">Scripture</a>
+                <a href="#">Final Project</a>
+            </nav> 
+        </header>
+        <main>
+            <h1>S. Alvin Svinurai</h1>
+            <section class="card about-me">
+                <h2>About Me</h2>
+                <div class="content">
+                    <div>
+                        <p>My name is Alvin. I am Zimbabwean. I currently work in data processing and analysis. I have a passion for web development and design. I am excited to utilize my knowledge and skills to create dynamic and interactive web applications.</p>
+                        
+                        <div class="local-facts">
+                            <div class="heading-container">
+                                <h3>Victoria Falls, Zimbabwe</h3>
+                            </div>
+                            <figure class="country-flag">
+                                <img src="images/zimbabwe-flag-sm.jpg" alt="Zimbabwean Flag">
+                                <figcaption>Zimbabwean Flag</figcaption>
+                            </figure>
+                            <p>Victoria Falls, known locally as Mosi-oa-Tunya ("The Smoke That Thunders"), is one of the world's most spectacular natural wonders. It is classified as the largest curtain of falling water in the world. As a designated UNESCO World Heritage site, it stands as a globally celebrated icon of geological beauty and biodiversity.</p>
+                        </div>
+                    </div>
+                    <img id="profile-pic" src="images/profile.jpg" alt="Profile Picture">
+                </div>
+                </section>
+            <section class="card web-dev-resources">
+                <h2>Web Dev Resources</h2>
+                <div class="content">
+                    <ul>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">MDN Web Docs</a></li>
+                        <li><a href="https://css-tricks.com/" target="_blank">CSS-Tricks</a></li>
+                        <li><a href="https://stackoverflow.com/" target="_blank">Stack Overflow</a></li>
+                    </ul>
+                </div>
+            </section>
+                
+        </main>
+        <footer>
+            <p>&copy;<span id="currentYear"></span> - Alvin Svinurai - Zimbabwe</p>
+            <p id="lastModified"></p>
+        </footer>
+    </div>
 </body>
 </html>
