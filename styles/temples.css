@@ -43,7 +43,7 @@ header span {
     left: 15px;
     text-decoration: none;
     color: var(--accent2-color);
-    background-color: none;
+    background-color: transparent;
     font-size: 1.5rem;
     padding: 0 0.5rem;
 }
@@ -56,7 +56,7 @@ header span {
     content: "❌";
 }
 
-.navigation {
+nav {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
