@@ -1,0 +1,149 @@
+:root {
+    --primary-color: rgb(50, 40, 136);
+    --secondary-color: #272727;
+    --accent1-color: #d1d1d1;
+    --accent2-color: #faf8f6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--secondary-color);
+    background-color: var(--accent2-color);
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--accent2-color);
+}
+
+header span {
+    display: block;
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding: 1rem 4rem;
+    text-align: left;
+    border: 1px solid rgb(0 0 0 / 0.2);
+    color: var(--accent2-color);
+    background-color: var(--primary-color);
+}
+
+#menu {
+    position: absolute;
+    top: 17px;
+    left: 15px;
+    text-decoration: none;
+    color: var(--accent2-color);
+    background-color: none;
+    font-size: 1.5rem;
+    padding: 0 0.5rem;
+}
+
+#menu::before {
+	content: "☰";
+}
+
+#menu.open::before {
+    content: "❌";
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+    width: 98%;
+    border-radius: 0 0 5px 0;
+    overflow: hidden;
+}
+
+.navigation a {
+    text-decoration: none;
+    display: none;
+    text-align: center;
+    padding: .5rem;
+    color: var(--accent2-color);
+    background-color: var(--primary-color);
+    font-weight: 600;
+    /* font-size: 1.2rem; */
+}
+
+.navigation a:hover {
+    background-color: var(--primary-color);
+    font-weight: 800;
+}
+
+.open a {
+    display: block;
+}
+
+.active::before {
+    content: "|";
+    padding: .2rem;
+}
+
+h1 {
+    font-weight: 900;
+    text-align: center;
+    margin: .5em;
+}
+
+main {
+    margin: 0 .5rem;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: .5rem;
+    margin-bottom: .5rem;
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+figure img {
+    width: 300px;
+    height: 150px;
+    margin-bottom: .5rem;
+    object-fit: cover;
+}
+
+figure figcaption {
+    font-weight: 500;
+    font-style: italic;
+    text-align: center;
+    margin: .5rem;
+}
+
+footer {
+    padding: .5rem;
+    border-top: 1px solid rgb(0 0 0 / 0.2);
+}
+
+footer p {
+    text-align: center;
+    font-family: var(--heading-font);
+    font-weight: 400;
+}
+
+#lastModified {
+    font-size: .7rem;
+    font-weight: 400;
+}
+
+
+
+
