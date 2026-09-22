@@ -9,14 +9,22 @@
     }
 
     .navigation {
+        position: static;
         flex-direction: row;
         border-radius: 0;
         width: 100%;
+        max-width: 100vw;
+        overflow: visible;
+        transform: none;
+        transition: none;
     }
 
     .navigation a {
         display: block;
         flex: 1 1 100%;
+        padding: .5rem;
+        transform: none;
+        visibility: visible;
     }
 
     .content {
