@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="S. Alvin Svinurai">
+    <meta name="description" content="Discover Victoria Falls, Zimbabwe: facts about the town, its location, and local weather.">
+    <meta name="theme-color" content="#b5122b">
+    <title>Victoria Falls, Zimbabwe | Place Profile</title>
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/places.js" defer></script>
+</head>
+<body>
+    <div class="page-shell">
+        <header class="site-header">
+            <h1>Victoria Falls, Zimbabwe</h1>
+        </header>
+
+        <main>
+            <section class="hero" aria-label="Victoria Falls information">
+                <figure class="hero-photo">
+                    <picture>
+                        <source srcset="images/victoria-falls-lg.webp" media="(min-width: 900px)" type="image/webp">
+                        <img src="images/victoria-falls-sm.webp" alt="Sunrise over Victoria Falls as water pours into the gorge" width="427" height="320" fetchpriority="high">
+                    </picture>
+                    <figcaption class="visually-hidden">Victoria Falls at sunrise</figcaption>
+                </figure>
+
+                <section class="info-card data-card" aria-labelledby="data-heading">
+                    <h2 id="data-heading">Place Facts</h2>
+                    <dl class="fact-list">
+                        <div><dt>Country</dt><dd>Zimbabwe</dd></div>
+                        <div><dt>Area</dt><dd>390,757 km²</dd></div>
+                        <div><dt>Town population</dt><dd>35,199</dd></div>
+                        <div><dt>Capital</dt><dd>Harare</dd></div>
+                        <div><dt>Languages</dt><dd>English, Shona, Ndebele</dd></div>
+                        <div><dt>Currency</dt><dd>Zimbabwe Gold (ZiG)</dd></div>
+                        <div><dt>Time zone</dt><dd>UTC+2</dd></div>
+                        <div><dt>Calling code</dt><dd>+263</dd></div>
+                        <div><dt>Internet TLD</dt><dd>.zw</dd></div>
+                    </dl>
+                </section>
+
+                <section class="info-card weather-card" aria-labelledby="weather-heading">
+                    <div class="weather-title">
+                        <h2 id="weather-heading">Weather</h2>
+                        <img class="weather-icon-mobile" src="images/partly-cloudy.svg" alt="Partly cloudy">
+                    </div>
+                    <dl class="fact-list weather-facts">
+                        <div><dt>Temperature</dt><dd id="temperature">29 °C</dd></div>
+                        <div><dt>Conditions</dt><dd>Partly cloudy</dd></div>
+                        <div><dt>Wind</dt><dd id="wind-speed">10 km/h</dd></div>
+                        <div><dt>Wind chill</dt><dd id="wind-chill">N/A</dd></div>
+                    </dl>
+                </section>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <p>&copy; <span id="currentYear"></span> S. Alvin Svinurai <span class="footer-divider">|</span> Victoria Falls, Zimbabwe</p>
+            <p>Last modified: <time id="lastModified"></time></p>
+        </footer>
+    </div>
+</body>
+</html>
