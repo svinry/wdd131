@@ -3,36 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zimbabwe | Country Profile</title>
     <meta name="author" content="S. Alvin Svinurai">
     <meta name="description" content="Discover Victoria Falls, Zimbabwe: facts about the town, its location, and local weather.">
-    <meta name="theme-color" content="#b5122b">
-    <title>Victoria Falls, Zimbabwe | Place Profile</title>
     <link rel="stylesheet" href="styles/place.css">
-    <script src="scripts/places.js" defer></script>
+    <link rel="stylesheet" href="styles/place-large.css">
+    <script src="scripts/place.js" defer></script>
+    <!-- <script src="scripts/getdates.js" defer></script> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400..900&family=Roboto:ital@0;1&display=swap" rel="stylesheet">
+    
 </head>
 <body>
-    <div class="page-shell">
-        <header class="site-header">
-            <h1>Victoria Falls, Zimbabwe</h1>
+    <div class="layout">
+        <header>
+            <span>Victoria Falls, Zimbabwe</span>
         </header>
-
         <main>
-            <section class="hero" aria-label="Victoria Falls information">
-                <figure class="hero-photo">
-                    <picture>
-                        <source srcset="images/victoria-falls-lg.webp" media="(min-width: 900px)" type="image/webp">
-                        <img src="images/victoria-falls-sm.webp" alt="Sunrise over Victoria Falls as water pours into the gorge" width="427" height="320" fetchpriority="high">
-                    </picture>
-                    <figcaption class="visually-hidden">Victoria Falls at sunrise</figcaption>
-                </figure>
-
-                <section class="info-card data-card" aria-labelledby="data-heading">
-                    <h2 id="data-heading">Place Facts</h2>
-                    <dl class="fact-list">
+            <div class="hero">
+                <picture>
+                    <source srcset="images/victoria-falls-lg.webp" media="(min-width: 600px)">
+                    <img src="images/victoria-falls-sm.webp" alt="Victoria Falls gorge at sunset" width="426" height="248" fetchpriority="high">
+                </picture>
+                <section class="card country-data">
+                    <div class="card-title">
+                        <h2>Data</h2>
+                    </div>
+                    <dl class="metadata">
                         <div><dt>Country</dt><dd>Zimbabwe</dd></div>
-                        <div><dt>Area</dt><dd>390,757 km²</dd></div>
-                        <div><dt>Town population</dt><dd>35,199</dd></div>
-                        <div><dt>Capital</dt><dd>Harare</dd></div>
+                        <div><dt>Area</dt><dd>23.4 km²</dd></div>
+                        <div><dt>Population</dt><dd>35,199</dd></div>
                         <div><dt>Languages</dt><dd>English, Shona, Ndebele</dd></div>
                         <div><dt>Currency</dt><dd>Zimbabwe Gold (ZiG)</dd></div>
                         <div><dt>Time zone</dt><dd>UTC+2</dd></div>
@@ -40,25 +41,23 @@
                         <div><dt>Internet TLD</dt><dd>.zw</dd></div>
                     </dl>
                 </section>
-
-                <section class="info-card weather-card" aria-labelledby="weather-heading">
-                    <div class="weather-title">
-                        <h2 id="weather-heading">Weather</h2>
-                        <img class="weather-icon-mobile" src="images/partly-cloudy.svg" alt="Partly cloudy">
+                <section class="card weather-details">
+                    <div class="card-title">
+                        <h2>Weather</h2>
+                        <img src="images/partly-cloudy.svg" alt="Partly cloudy" width="50" height="50">
                     </div>
-                    <dl class="fact-list weather-facts">
-                        <div><dt>Temperature</dt><dd id="temperature">29 °C</dd></div>
+                    <dl class="metadata">
+                        <div><dt>Temperature</dt><dd id="temperature">15 °C</dd></div>
                         <div><dt>Conditions</dt><dd>Partly cloudy</dd></div>
                         <div><dt>Wind</dt><dd id="wind-speed">10 km/h</dd></div>
                         <div><dt>Wind chill</dt><dd id="wind-chill">N/A</dd></div>
                     </dl>
                 </section>
-            </section>
+            </div>
         </main>
-
-        <footer class="site-footer">
-            <p>&copy; <span id="currentYear"></span> S. Alvin Svinurai <span class="footer-divider">|</span> Victoria Falls, Zimbabwe</p>
-            <p>Last modified: <time id="lastModified"></time></p>
+        <footer>
+            <p>&copy;<span id="currentYear"></span> - Alvin Svinurai - Zimbabwe</p>
+            <p id="lastModified"></p>
         </footer>
     </div>
 </body>

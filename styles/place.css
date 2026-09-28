@@ -1,244 +1,137 @@
 :root {
-	--color-red: #b5122b;
-	--color-green: #087a4b;
-	--color-gold: #f2c14e;
-	--color-ink: #202522;
-	--color-paper: #fffdf8;
-	--color-muted: #59625e;
-	--card-shadow: 0 0.5rem 1.5rem rgb(0 0 0 / 22%);
+    --bg-primary: #fff6f6;
+    --bg-secondary: #b5122b;
+    --bg-tertiary: #087a4b;
+    --text-primary: #fffdf8;
+    --text-secondary: #202522;
+    --text-muted: #4a524e;
 }
 
 * {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-	min-width: 320px;
-	color: var(--color-ink);
-	background: #f2f5ef;
-	font-family: Arial, Helvetica, sans-serif;
-	line-height: 1.5;
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--text-secondary);
+    background-color: var(--bg-primary);
 }
 
-.page-shell {
-	display: flex;
-	min-height: 100vh;
-	flex-direction: column;
+header {
+    display: flex;
+    justify-content: center;
+    background-color: var(--bg-secondary);
 }
 
-.site-header {
-	position: relative;
-	z-index: 1;
-	padding: 0.65rem 1rem 0.8rem;
-	border-bottom: 0.5rem solid var(--color-green);
-	background-color: var(--color-red);
-	color: white;
-	text-align: center;
-}
-
-.site-header h1 {
-	font-size: clamp(1.5rem, 4vw, 2.5rem);
-	font-weight: 700;
-	letter-spacing: 0.04em;
+header span {
+    margin: 1rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--text-primary);
 }
 
 main {
-	flex: 1;
+    min-width: 0;
+}
+
+dl dt {
+    color: var(--text-secondary);
+    font-weight: 600;
+    text-align: right;
+}
+
+dl dd {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    text-align: left;
+}
+
+dt::after {
+    content: ": ";
+}
+
+footer p {
+    text-align: center;
+    color: var(--text-primary);
+    font-weight: 400;
+}
+
+#lastModified {
+    font-size: .7rem;
+    font-weight: 400;
+}
+
+footer {
+   background-color: var(--bg-secondary); 
+   padding: 1rem;
+}
+
+.layout {
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr) auto;
+    min-height: 100vh;
+    min-height: 100svh;
 }
 
 .hero {
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	gap: 1rem;
-	padding-bottom: 1rem;
-	isolation: isolate;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
 }
 
-.hero-photo {
-	position: relative;
-	width: 100%;
-	aspect-ratio: 4 / 3;
-	overflow: hidden;
-	background-color: #343a34;
+.hero picture,
+.hero picture img {
+    display: block;
+    width: 100%;
 }
 
-.hero-photo picture,
-.hero-photo img {
+.hero picture img {
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    border-top: 8px solid var(--bg-tertiary);
+    border-bottom: 4px solid var(--bg-secondary);
+}
+
+.card {
+    background-color: var(--bg-primary);
+    padding: .7rem;
+    margin: 0 auto .3rem;
+    width: calc(100% - 1rem);
+}
+
+.card-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+.card-title h2 {
+    color: var(--text-secondary);
+    padding: .5rem;
+}
+
+.card-title img {
 	display: block;
-	width: 100%;
-	height: 100%;
+	width: 3.5rem;
+	height: 3.5rem;
+    margin: .5rem;
 }
 
-.hero-photo img {
-	object-fit: cover;
-	object-position: center;
+.metadata {
+    display: flex;
+    flex-direction: column;
 }
 
-.info-card {
-	width: calc(100% - 2rem);
-	max-width: 34rem;
-	margin-inline: auto;
-	border: 1px solid rgb(32 37 34 / 18%);
-	background-color: var(--color-paper);
-	box-shadow: var(--card-shadow);
-}
-
-.info-card h2 {
-	display: flex;
-	min-height: 3.25rem;
-	align-items: center;
-	justify-content: space-between;
-	padding: 0.55rem 0.9rem;
-	background-color: var(--color-green);
-	color: white;
-	font-size: 1.25rem;
-}
-
-.fact-list {
-	display: grid;
-	gap: 0.15rem;
-	padding: 0.8rem 1rem;
-}
-
-.fact-list > div {
-	display: grid;
-	grid-template-columns: minmax(7rem, 1fr) minmax(0, 1.25fr);
-	gap: 0.75rem;
-	align-items: baseline;
-	padding-block: 0.12rem;
-}
-
-.fact-list dt {
-	color: var(--color-muted);
-	font-weight: 600;
-	text-align: right;
-}
-
-.fact-list dd {
-	overflow-wrap: anywhere;
-}
-
-.weather-title h2::after {
-	content: none;
-}
-
-.weather-icon-mobile {
-	display: block;
-	width: 2.25rem;
-	height: 2.25rem;
-}
-
-.site-footer {
-	padding: 0.9rem 1rem;
-	border-top: 0.35rem solid var(--color-green);
-	background-color: var(--color-red);
-	color: white;
-	text-align: center;
-}
-
-.footer-divider {
-	padding-inline: 0.35rem;
-	color: var(--color-gold);
-}
-
-.site-footer p + p {
-	font-size: 0.85rem;
-}
-
-.visually-hidden {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	overflow: hidden;
-	clip: rect(0, 0, 0, 0);
-	white-space: nowrap;
-	clip-path: inset(50%);
-}
-
-@media (min-width: 48rem) {
-	.site-header {
-		padding-block: 0.8rem 1rem;
-		border-bottom-width: 0.65rem;
-	}
-
-	.hero {
-		min-height: clamp(34rem, 68vh, 48rem);
-		padding: 1.5rem;
-	}
-
-	.hero-photo {
-		position: absolute;
-		z-index: -1;
-		inset: 0;
-		width: 100%;
-		height: 100%;
-		aspect-ratio: auto;
-	}
-
-	.hero-photo img {
-		object-position: center 52%;
-	}
-
-	.hero-photo::after {
-		position: absolute;
-		inset: 0;
-		background: linear-gradient(90deg, rgb(0 0 0 / 22%), transparent 58%, rgb(0 0 0 / 18%));
-		content: "";
-		pointer-events: none;
-	}
-
-	.info-card {
-		position: absolute;
-		z-index: 1;
-		width: min(21rem, 35vw);
-		margin: 0;
-		background-color: rgb(255 253 248 / 94%);
-	}
-
-	.data-card {
-		top: 1.75rem;
-		left: 1.75rem;
-	}
-
-	.weather-card {
-		right: 1.75rem;
-		bottom: 1.75rem;
-	}
-
-	.weather-icon-mobile {
-		display: none;
-	}
-
-	.weather-title h2::after {
-		display: inline-block;
-		margin-left: 0.75rem;
-		content: "⛅";
-		font-size: 1.5rem;
-		line-height: 1;
-	}
-}
-
-@media (min-width: 75rem) {
-	.hero {
-		min-height: 42rem;
-	}
-
-	.data-card {
-		left: max(2rem, calc((100vw - 90rem) / 2));
-	}
-
-	.weather-card {
-		right: max(2rem, calc((100vw - 90rem) / 2));
-	}
-}
-
-@media (prefers-reduced-motion: reduce) {
-	*,
-	*::before,
-	*::after {
-		scroll-behavior: auto !important;
-	}
+.metadata div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: .5rem;
+    margin: .2rem 0;
 }

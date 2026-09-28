@@ -1,0 +1,72 @@
+@media (min-width: 600px) {
+
+    .layout {
+        height: 100vh;
+        height: 100dvh;
+        min-height: 34rem;
+        grid-template-rows: auto minmax(0, 1fr) auto;
+    }
+
+    main {
+        min-height: 0;
+    }
+
+    .hero {
+        height: 100%;
+        min-height: 0;
+        overflow: hidden;
+        padding-top: 0;
+        isolation: isolate;
+    }
+
+    .hero picture {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        height: 100%;
+    }
+
+    .hero picture img {
+        height: 100%;
+        object-fit: cover;
+        border-top: 8px solid var(--bg-tertiary);
+        border-bottom: 4px solid var(--bg-secondary);
+    }
+
+    .card {
+        z-index: 1;
+        background-color: rgb(from var(--bg-primary) r g b / 0.9);
+        width: min(21rem, 35vw);
+        margin: 0;
+    }
+
+    .country-data {
+        position: absolute;
+        top: 6rem;
+        left: 1rem;
+    }
+
+    .weather-details {
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem;
+    }
+
+    .card-title {
+        padding: 0;
+        transform: translateX(-1.3rem);
+        background-color: rgb(from var(--bg-tertiary) r g b / 0.9);
+    }
+
+    .card-title h2 {
+        color: var(--text-primary);
+    }
+
+    .weather-details img {
+        display: none;
+    }
+
+    .weather-details .card-title h2::after {
+        content: " ⛅";
+    }
+}
