@@ -77,9 +77,8 @@ nav {
     transform: translateX(0);
 }
 
-.navigation button {
-    background-color: transparent;
-    border: none;
+.navigation a {
+    text-decoration: none;
     text-align: center;
     padding: 1rem 0;
     color: var(--accent2-color);
@@ -89,7 +88,7 @@ nav {
     visibility: hidden;
 }
 
-.navigation button:hover,
+.navigation a:hover,
 .active {
     background-color: var(--accent1-color);
     opacity: .9;
@@ -97,11 +96,11 @@ nav {
     margin: 0 .3rem;
 }
 
-.navigation button:hover {
-    -webkit-text-stroke: 0.3px currentColor;
+.navigation a:hover {
+    font-weight: 800;
 }
 
-.open button {
+.open a {
     /* display: block; */
     transform: translateX(0);
     visibility: visible;

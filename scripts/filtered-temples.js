@@ -93,7 +93,7 @@ function displayTemple(temple) {
   const card = document.createElement("div");
   card.classList.add("card");
   card.innerHTML = `
-    <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy">
+    <img src="${temple.imageUrl}" alt="${temple.templeName} temple picture" loading="lazy">
     <h2>${temple.templeName}</h2>
     <dl>
       <div><dt>LOCATION:</dt><dd>${temple.location}</dd></div>
@@ -159,7 +159,7 @@ largeFilter.addEventListener("click", () => {
 });
 
 function setActiveButton(button) {
-  document.querySelectorAll(".navigation button").forEach((item) => {
+  document.querySelectorAll(".navigation a").forEach((item) => {
     item.classList.remove("active");
   });
   button.classList.add("active");
