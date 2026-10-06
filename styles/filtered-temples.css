@@ -90,8 +90,8 @@ nav {
 
 .navigation a:hover,
 .active {
-    background-color: var(--accent1-color);
-    opacity: .9;
+    background-color: rgb(from var(--accent1-color) r g b / 0.2);
+    /* opacity: .9; */
     border-radius: 5px;
     margin: 0 .3rem;
 }

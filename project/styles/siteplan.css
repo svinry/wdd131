@@ -1,0 +1,149 @@
+:root {
+    --background-color-primary: rgb(234, 242, 227);
+    --background-color-secondary: rgb(237, 175, 184);
+    --text-color-primary: rgb(45, 45, 42);
+    --text-color-secondary: var(--background-color-primary);
+    --accent-color1: rgb(67, 185, 59);
+    --accent-color2: rgb(236, 11, 67);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Arimo", serif;
+    font-weight: 400;
+    color: var(--text-color-primary);
+    background-color: var(--background-color-primary);
+}
+
+main {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Playfair Display", serif;
+}
+
+h1 {
+    font-weight: 700;
+}
+
+h2 {
+    font-weight: 600;
+}
+
+.heading-font {
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    color: var(--text-color-primary);
+}
+
+span {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+p h2 {
+    display: block;
+}
+
+section {
+    padding: .5rem;
+}
+
+h1 {
+    padding: 1rem;
+}
+
+h2 {
+    padding: .5rem .5rem;
+}
+
+p {
+    padding: .5rem 1rem;
+}
+
+ul {
+    padding:  .5rem 2rem;
+}
+
+table {
+    border-collapse: collapse;
+    border: 2px solid var(--text-color-primary);
+    letter-spacing: 1px;
+    font-size: .9rem;
+}
+
+
+
+td, th {
+    border: 1px solid var(--text-color-primary);
+    padding: .5rem;
+}
+
+th {
+    background-color: rgb(from var(--background-color-secondary) r g b / .5);
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.wireframe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.box {
+    display: inline-block;
+    background-color: var(--background-color-secondary);
+    padding: .5rem;
+    border-radius: 10px;
+}
+
+#graphite {
+    background-color: var(--text-color-primary);
+    margin: 1rem;
+}
+
+#honeydew {
+    background-color: var(--background-color-primary);
+    margin: 1rem;
+}
+
+#cherry-blossom {
+    background-color: var(--background-color-secondary);
+    margin: 1rem;
+}
+
+#jade-green {
+    background-color: var(--accent-color1);
+    margin: 1rem;
+}
+
+#lipstick-red {
+    background-color: var(--accent-color2);
+    margin: 1rem;
+}
+
+
+
+
+/* figure img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+} */
+
+
