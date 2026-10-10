@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Review Submitted | WDD 131</title>
+		<meta name="author" content="Shingirai Alvin Svinurai">
+		<meta name="description" content="Product review submission confirmation.">
+		<link rel="stylesheet" href="styles/form.css">
+		<script src="scripts/review.js" defer></script>
+		<script src="scripts/getdates.js" defer></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<div class="page-layout">
+			<header>
+				<h1>Product Review</h1>
+			</header>
+			<main>
+				<section class="confirmation-card" aria-labelledby="confirmation-title">
+					<h2 id="confirmation-title">Thank you for your review!</h2>
+					<p id="review-summary">Your feedback has been recorded.</p>
+					<p class="review-count">Reviews completed: <strong id="reviewCount">0</strong></p>
+					<a class="back-link" href="form.html">Write another review</a>
+				</section>
+			</main>
+			<footer>
+				<p>&copy;<span id="currentYear"></span> - Alvin Svinurai - Zimbabwe</p>
+				<p id="lastModified"></p>
+			</footer>
+		</div>
+	</body>
+</html>
