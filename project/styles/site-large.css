@@ -1,0 +1,126 @@
+@media (min-width: 700px) {
+    .site-header {
+        min-height: 5.5rem;
+    }
+
+    .nav-bar {
+        display: none;
+    }
+
+    .site-navigation {
+        min-height: 3.5rem;
+    }
+
+    .navigation-panel,
+    .navigation-panel.is-open {
+        position: static;
+        display: flex;
+        width: min(100% - 2rem, 76rem);
+        min-height: 3.5rem;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.25rem;
+        margin-inline: auto;
+        padding: 0;
+        background: transparent;
+        box-shadow: none;
+        transform: none;
+        visibility: visible;
+    }
+
+    .navigation-panel a {
+        padding: 0.65rem 1rem;
+        border: 0;
+        border-radius: 0.2rem;
+        font-size: 0.9rem;
+    }
+
+    .navigation-panel a:hover,
+    .navigation-panel a[aria-current="page"] {
+        background-color: rgb(234 242 227 / 14%);
+    }
+
+    body.home-page {
+        background-image: linear-gradient(180deg, rgb(16 27 21 / 23%), rgb(16 27 21 / 10%)), url("../images/victoria-falls-lg.webp");
+    }
+
+    .home-hero {
+        min-height: min(82svh, 56rem);
+    }
+
+    .intro-section {
+        grid-template-columns: 1.1fr 0.9fr;
+        align-items: start;
+        gap: clamp(2rem, 6vw, 6rem);
+    }
+
+    .section-heading {
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+
+    .feature-grid-round {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .feature-grid-wide {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .feature-card {
+        min-height: 17rem;
+        padding: 1.6rem;
+    }
+
+    .planning-inner {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .planning-inner .button {
+        flex: none;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr auto;
+        align-items: center;
+    }
+
+    .footer-brand {
+        grid-row: span 2;
+    }
+
+    .footer-links {
+        justify-content: flex-end;
+    }
+
+    .footer-meta {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .activity-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .review-layout {
+        grid-template-columns: minmax(0, 0.8fr) minmax(20rem, 1fr);
+        align-items: start;
+        gap: clamp(2rem, 6vw, 6rem);
+    }
+
+    .contact-section {
+        grid-template-columns: minmax(15rem, 0.8fr) minmax(20rem, 1fr);
+        align-items: start;
+        gap: clamp(2rem, 6vw, 6rem);
+    }
+}
+
+@media (min-width: 1100px) {
+    .activity-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.25rem;
+    }
+}

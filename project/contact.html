@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Victoria Falls Activity Guide</title>
+    <meta name="author" content="Shingirai Alvin Svinurai">
+    <meta name="description" content="Send a question or suggestion about the Victoria Falls Activity Guide student project.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/site.css">
+    <link rel="stylesheet" href="styles/site-large.css">
+    <script src="scripts/site.js" defer></script>
+    <script src="scripts/contact.js" defer></script>
+</head>
+<body class="page-shell">
+    <header class="site-header">
+        <a class="brand" href="index.html" aria-label="Victoria Falls Activity Guide home">
+            <span class="brand-mark" aria-hidden="true">VF</span>
+            <span class="brand-name">Victoria Falls <span>Activity Guide</span></span>
+        </a>
+    </header>
+    <nav class="site-navigation" aria-label="Main navigation">
+        <div class="nav-bar">
+            <a class="nav-home" href="index.html">Discover</a>
+            <button class="menu-toggle" type="button" aria-controls="navigation-panel" aria-expanded="false" aria-label="Open navigation menu"><span></span><span></span><span></span></button>
+        </div>
+        <div class="navigation-panel" id="navigation-panel">
+            <a href="index.html">Discover</a>
+            <a href="activities.html">Activities</a>
+            <a href="contact.html" aria-current="page">Contact</a>
+        </div>
+    </nav>
+
+    <main class="page-main contact-main">
+        <section class="page-intro content-wrap" aria-labelledby="page-title">
+            <p class="eyebrow eyebrow-dark">Questions, ideas & feedback</p>
+            <h1 id="page-title">Get in touch</h1>
+            <p>Have a suggestion for the guide or spotted something that needs correcting? Use the form to share a note.</p>
+        </section>
+        <section class="contact-section content-wrap" aria-label="Contact form and project information">
+            <div class="contact-note">
+                <span class="contact-icon" aria-hidden="true">✉</span>
+                <h2>A note about this form</h2>
+                <p>This is a student-project demonstration and does not have a server or email service connected. Submitting the form will validate your message and show a confirmation on this page, but your message will not be delivered or saved.</p>
+                <p>For a real travel booking or safety question, contact the relevant park authority or licensed activity operator directly.</p>
+            </div>
+            <form class="contact-form" id="contact-form">
+                <label for="contact-name">Name</label>
+                <input id="contact-name" name="name" type="text" autocomplete="name" maxlength="60" required>
+
+                <label for="contact-email">Email address</label>
+                <input id="contact-email" name="email" type="email" autocomplete="email" maxlength="120" required>
+
+                <label for="contact-topic">What is your message about?</label>
+                <select id="contact-topic" name="topic" required>
+                    <option value="" selected disabled>Select a topic</option>
+                    <option value="suggestion">A guide suggestion</option>
+                    <option value="correction">A correction</option>
+                    <option value="accessibility">Accessibility feedback</option>
+                    <option value="other">Something else</option>
+                </select>
+
+                <label for="contact-message">Message</label>
+                <textarea id="contact-message" name="message" rows="6" maxlength="1000" required></textarea>
+                <p class="form-hint">Please avoid sharing sensitive personal information.</p>
+                <button class="button button-dark" type="submit">Review message</button>
+                <p class="form-status" id="contact-status" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-main">
+            <a class="footer-brand" href="index.html">Victoria Falls <span>Activity Guide</span></a>
+            <p>A student guide to planning a thoughtful visit.</p>
+            <nav class="footer-links" aria-label="Footer navigation">
+                <a href="activities.html">Activities</a>
+                <a href="contact.html">Contact</a>
+                <a href="references.html">References</a>
+            </nav>
+        </div>
+        <div class="footer-meta">
+            <p>© <span id="current-year"></span> Victoria Falls Activity Guide</p>
+            <p id="last-modified">Last modified: <span></span></p>
+        </div>
+    </footer>
+</body>
+</html>
