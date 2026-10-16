@@ -446,15 +446,6 @@ body.home-page {
 .feature-history { background-color: #65716d; background-image: linear-gradient(145deg, #98aaa1, #4b5c54); }
 .feature-community { background-color: #7b5d6a; background-image: linear-gradient(145deg, #b48a91, #684656); }
 
-.feature-symbol {
-    position: absolute;
-    z-index: 2;
-    top: 1.1rem;
-    right: 1.25rem;
-    font-size: 3.8rem;
-    filter: drop-shadow(0 0.2rem 0.4rem rgb(0 0 0 / 20%));
-}
-
 .feature-title {
     position: relative;
     z-index: 2;

@@ -4,7 +4,6 @@ const activities = [
         name: "Rainforest & falls viewpoints",
         category: "tour",
         categoryName: "Tours & river",
-        symbol: "🌈",
         image: { src: "victoria-falls-lg.webp", alt: "Victoria Falls and its misty gorge", width: 640, height: 960 },
         description: "Walk the established viewpoints near the waterfall and experience its spray, rainforest, and changing views. The falls can look very different as river levels change through the year.",
         practical: "Check park opening hours, entry requirements, and current path conditions before visiting."
@@ -14,7 +13,6 @@ const activities = [
         name: "Zambezi sunset cruise",
         category: "tour",
         categoryName: "Tours & river",
-        symbol: "🚤",
         image: { src: "zambezi-river-cruise.jpg", alt: "A cruise boat and elephant on the Zambezi River", width: 750, height: 450 },
         description: "Spend time on the river and watch the light change over the Zambezi. Cruise formats, routes, inclusions, and departure points vary by operator.",
         practical: "Compare licensed operators and confirm transport, accessibility, and what the fare includes."
@@ -24,7 +22,7 @@ const activities = [
         name: "Scenic flight over the falls",
         category: "tour",
         categoryName: "Tours & river",
-        symbol: "🚁",
+        image: { src: "victoria-falls-arial2.webp", alt: "Helicopter flying above Victoria Falls and the Zambezi gorge", width: 925, height: 615 },
         description: "A scenic flight can reveal the waterfall's broad curtain, islands, and deep gorges from above. Aircraft, flight length, and routes depend on the operator.",
         practical: "Ask about current flight routes, weather cancellations, passenger limits, and accessibility."
     },
@@ -33,7 +31,7 @@ const activities = [
         name: "White-water rafting",
         category: "adventure",
         categoryName: "Adventure",
-        symbol: "🛶",
+        image: { src: "victoria-falls-rafting.webp", alt: "A guided raft navigating white water on the Zambezi River", width: 474, height: 266 },
         description: "Guided rafting on the Zambezi is an adventurous way to experience the river below the falls. It is a demanding activity and is not suitable for everyone.",
         practical: "Availability depends on river and safety conditions. Check age, fitness, swimming, and seasonal restrictions with a licensed operator."
     },
@@ -42,7 +40,7 @@ const activities = [
         name: "Gorge & canopy adventures",
         category: "adventure",
         categoryName: "Adventure",
-        symbol: "🌿",
+        image: { src: "victoria-falls-bungee.jpg", alt: "A visitor bungee jumping above the gorge at Victoria Falls", width: 1920, height: 870 },
         description: "Canopy routes, zip lines, and gorge activities offer elevated views and a more active way to explore the landscape around the falls.",
         practical: "Check current operating status, age and weight limits, safety credentials, and weather restrictions."
     },
@@ -51,7 +49,6 @@ const activities = [
         name: "Wildlife game drive",
         category: "safari",
         categoryName: "Wildlife",
-        symbol: "🐘",
         image: { src: "victoria-falls-safari.webp", alt: "Visitors observing elephants on safari", width: 474, height: 316 },
         description: "A guided drive in the surrounding protected areas offers a chance to learn about local habitats and wildlife. Sightings are never guaranteed.",
         practical: "Confirm park access, departure location, guide credentials, and wildlife-viewing rules."
@@ -61,7 +58,6 @@ const activities = [
         name: "Victoria Falls Bridge & heritage",
         category: "culture",
         categoryName: "Culture & heritage",
-        symbol: "🌉",
         image: { src: "victoria-falls-railway.jpg", alt: "Historic railway carriage passing through the landscape", width: 786, height: 446 },
         description: "Learn about the historic bridge, its engineering, and its place in regional travel. Some bridge experiences are operated separately from ordinary visitor access.",
         practical: "Check border and entry requirements if crossing between Zimbabwe and Zambia; verify tour access in advance."
@@ -71,7 +67,6 @@ const activities = [
         name: "Local crafts & makers",
         category: "culture",
         categoryName: "Culture & heritage",
-        symbol: "🧺",
         image: { src: "victoria-falls-crafts.webp", alt: "Handmade crafts displayed at a local market", width: 474, height: 316 },
         description: "Browse locally made art and crafts, and take time to learn about the people and techniques behind the work. Ask before photographing makers or their stalls.",
         practical: "Carry local currency in small denominations and be respectful when negotiating or taking photographs."
@@ -81,7 +76,6 @@ const activities = [
         name: "Community-led cultural experience",
         category: "culture",
         categoryName: "Culture & heritage",
-        symbol: "🎶",
         image: { src: "victoria-falls-culture.webp", alt: "Performers sharing a local cultural dance", width: 474, height: 308 },
         description: "Choose experiences led by local hosts to hear stories, learn about traditions, and support community-run tourism on the host community's terms.",
         practical: "Ask how the experience is organized and how visitor fees support local hosts."
@@ -124,19 +118,14 @@ function createActivityCard(activity, reviews) {
 
     const artwork = document.createElement("div");
     artwork.className = `activity-art category-${activity.category}`;
-    if (activity.image) {
-        const image = document.createElement("img");
-        image.src = `images/${activity.image.src}`;
-        image.alt = activity.image.alt;
-        image.width = activity.image.width;
-        image.height = activity.image.height;
-        image.loading = "lazy";
-        image.decoding = "async";
-        artwork.append(image);
-    } else {
-        artwork.setAttribute("aria-hidden", "true");
-        artwork.textContent = activity.symbol;
-    }
+    const image = document.createElement("img");
+    image.src = `images/${activity.image.src}`;
+    image.alt = activity.image.alt;
+    image.width = activity.image.width;
+    image.height = activity.image.height;
+    image.loading = "lazy";
+    image.decoding = "async";
+    artwork.append(image);
 
     const content = document.createElement("div");
     content.className = "activity-card-body";
