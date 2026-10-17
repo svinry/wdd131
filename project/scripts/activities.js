@@ -4,45 +4,40 @@ const activities = [
         name: "Rainforest & falls viewpoints",
         category: "tour",
         categoryName: "Tours & river",
-        image: { src: "victoria-falls-lg.webp", alt: "Victoria Falls and its misty gorge", width: 640, height: 960 },
-        description: "Walk the established viewpoints near the waterfall and experience its spray, rainforest, and changing views. The falls can look very different as river levels change through the year.",
-        practical: "Check park opening hours, entry requirements, and current path conditions before visiting."
+        image: { src: "victoria-falls-lg.webp", alt: "Victoria Falls gorge", width: 640, height: 960 },
+        description: "Walk the established viewpoints near the waterfall and experience its spray, rainforest, and changing views."
     },
     {
         id: "zambezi-cruise",
         name: "Zambezi sunset cruise",
         category: "tour",
         categoryName: "Tours & river",
-        image: { src: "zambezi-river-cruise.jpg", alt: "A cruise boat and elephant on the Zambezi River", width: 750, height: 450 },
-        description: "Spend time on the river and watch the light change over the Zambezi. Cruise formats, routes, inclusions, and departure points vary by operator.",
-        practical: "Compare licensed operators and confirm transport, accessibility, and what the fare includes."
+        image: { src: "zambezi-river-cruise.jpg", alt: "Zambezi River cruise boat", width: 750, height: 450 },
+        description: "Spend time on the river and watch the light change over the Zambezi."
     },
     {
         id: "helicopter-flight",
         name: "Scenic flight over the falls",
         category: "tour",
         categoryName: "Tours & river",
-        image: { src: "victoria-falls-arial2.webp", alt: "Helicopter flying above Victoria Falls and the Zambezi gorge", width: 925, height: 615 },
-        description: "A scenic flight can reveal the waterfall's broad curtain, islands, and deep gorges from above. Aircraft, flight length, and routes depend on the operator.",
-        practical: "Ask about current flight routes, weather cancellations, passenger limits, and accessibility."
+        image: { src: "victoria-falls-arial2.webp", alt: "Victoria Falls Helicopter", width: 925, height: 615 },
+        description: "A scenic flight can reveal the waterfall's broad curtain, islands, and deep gorges from above."
     },
     {
         id: "white-water-rafting",
         name: "White-water rafting",
         category: "adventure",
         categoryName: "Adventure",
-        image: { src: "victoria-falls-rafting.webp", alt: "A guided raft navigating white water on the Zambezi River", width: 474, height: 266 },
-        description: "Guided rafting on the Zambezi is an adventurous way to experience the river below the falls. It is a demanding activity and is not suitable for everyone.",
-        practical: "Availability depends on river and safety conditions. Check age, fitness, swimming, and seasonal restrictions with a licensed operator."
+        image: { src: "victoria-falls-rafting.webp", alt: "White water raft on the Zambezi River", width: 474, height: 266 },
+        description: "Guided rafting on the Zambezi is an adventurous way to experience the river below the falls. It is a demanding activity and is not suitable for everyone."
     },
     {
         id: "canopy-adventure",
         name: "Gorge & canopy adventures",
         category: "adventure",
         categoryName: "Adventure",
-        image: { src: "victoria-falls-bungee.jpg", alt: "A visitor bungee jumping above the gorge at Victoria Falls", width: 1920, height: 870 },
-        description: "Canopy routes, zip lines, and gorge activities offer elevated views and a more active way to explore the landscape around the falls.",
-        practical: "Check current operating status, age and weight limits, safety credentials, and weather restrictions."
+        image: { src: "victoria-falls-bungee.jpg", alt: "Victoria Falls bungee jumping", width: 1920, height: 870 },
+        description: "Canopy routes, zip lines, and gorge activities offer elevated views and a more active way to explore the landscape around the falls."
     },
     {
         id: "game-drive",
@@ -50,26 +45,23 @@ const activities = [
         category: "safari",
         categoryName: "Wildlife",
         image: { src: "victoria-falls-safari.webp", alt: "Visitors observing elephants on safari", width: 474, height: 316 },
-        description: "A guided drive in the surrounding protected areas offers a chance to learn about local habitats and wildlife. Sightings are never guaranteed.",
-        practical: "Confirm park access, departure location, guide credentials, and wildlife-viewing rules."
+        description: "A guided drive in the surrounding protected areas offers a chance to learn about local habitats and wildlife."
     },
     {
         id: "bridge-heritage",
         name: "Victoria Falls Bridge & heritage",
         category: "culture",
         categoryName: "Culture & heritage",
-        image: { src: "victoria-falls-railway.jpg", alt: "Historic railway carriage passing through the landscape", width: 786, height: 446 },
-        description: "Learn about the historic bridge, its engineering, and its place in regional travel. Some bridge experiences are operated separately from ordinary visitor access.",
-        practical: "Check border and entry requirements if crossing between Zimbabwe and Zambia; verify tour access in advance."
+        image: { src: "victoria-falls-railway.jpg", alt: "Historic railway carriage", width: 786, height: 446 },
+        description: "Learn about the historic bridge, its engineering, and its place in regional travel."
     },
     {
         id: "local-crafts",
         name: "Local crafts & makers",
         category: "culture",
         categoryName: "Culture & heritage",
-        image: { src: "victoria-falls-crafts.webp", alt: "Handmade crafts displayed at a local market", width: 474, height: 316 },
-        description: "Browse locally made art and crafts, and take time to learn about the people and techniques behind the work. Ask before photographing makers or their stalls.",
-        practical: "Carry local currency in small denominations and be respectful when negotiating or taking photographs."
+        image: { src: "victoria-falls-crafts.webp", alt: "Handmade crafts at a local market", width: 474, height: 316 },
+        description: "Browse locally made art and crafts, and take time to learn about the people and techniques behind the work."
     },
     {
         id: "community-culture",
@@ -77,8 +69,7 @@ const activities = [
         category: "culture",
         categoryName: "Culture & heritage",
         image: { src: "victoria-falls-culture.webp", alt: "Performers sharing a local cultural dance", width: 474, height: 308 },
-        description: "Choose experiences led by local hosts to hear stories, learn about traditions, and support community-run tourism on the host community's terms.",
-        practical: "Ask how the experience is organized and how visitor fees support local hosts."
+        description: "Choose experiences led by local hosts to hear stories, learn about traditions, and support community-run tourism on the host community's terms."
     }
 ];
 
@@ -93,12 +84,8 @@ const reviewEmpty = document.querySelector("#review-empty");
 let activeFilter = "all";
 
 function getReviews() {
-    try {
-        const savedReviews = JSON.parse(localStorage.getItem(reviewStorageKey) || "[]");
-        return Array.isArray(savedReviews) ? savedReviews : [];
-    } catch (error) {
-        return [];
-    }
+    const savedReviews = JSON.parse(localStorage.getItem(reviewStorageKey) || "[]");
+    return Array.isArray(savedReviews) ? savedReviews : [];
 }
 
 function getActivityReviews(activityId, reviews) {
@@ -140,10 +127,6 @@ function createActivityCard(activity, reviews) {
     const description = document.createElement("p");
     description.textContent = activity.description;
 
-    const practical = document.createElement("p");
-    practical.className = "activity-practical";
-    practical.textContent = activity.practical;
-
     const summary = getRatingSummary(activity.id, reviews);
     const rating = document.createElement("p");
     rating.className = "activity-rating";
@@ -167,7 +150,7 @@ function createActivityCard(activity, reviews) {
     });
 
     rating.append(stars, ratingText);
-    content.append(category, title, description, practical, rating, reviewLink);
+    content.append(category, title, description, rating, reviewLink);
     card.append(artwork, content);
     return card;
 }
@@ -241,15 +224,6 @@ function setActiveFilter(filterButton) {
     renderActivities();
 }
 
-function getInitialFilter() {
-    const requestedFilter = new URLSearchParams(window.location.search).get("category");
-    const validFilter = ["tour", "adventure", "safari", "culture"].includes(requestedFilter) ? requestedFilter : "all";
-    const matchingButton = document.querySelector(`.filter-button[data-filter="${validFilter}"]`);
-    if (matchingButton) {
-        setActiveFilter(matchingButton);
-    }
-}
-
 document.querySelectorAll(".filter-button").forEach((button) => {
     button.addEventListener("click", () => setActiveFilter(button));
 });
@@ -275,22 +249,16 @@ if (reviewForm) {
             return;
         }
 
-        try {
-            const savedReviews = getReviews();
-            savedReviews.push(review);
-            localStorage.setItem(reviewStorageKey, JSON.stringify(savedReviews));
-            reviewForm.reset();
-            reviewStatus.textContent = "Your review has been saved in this browser.";
-            renderActivities();
-            renderReviews();
-        } catch (error) {
-            reviewStatus.classList.add("is-error");
-            reviewStatus.textContent = "This browser could not save your review. Check your storage settings and try again.";
-        }
+        const savedReviews = getReviews();
+        savedReviews.push(review);
+        localStorage.setItem(reviewStorageKey, JSON.stringify(savedReviews));
+        reviewForm.reset();
+        reviewStatus.textContent = "Your review has been saved in this browser.";
+        renderActivities();
+        renderReviews();
     });
 }
 
 populateActivityOptions();
-getInitialFilter();
 renderActivities();
 renderReviews();

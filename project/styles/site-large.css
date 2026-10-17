@@ -35,8 +35,7 @@
         font-size: 0.9rem;
     }
 
-    .navigation-panel a:hover,
-    .navigation-panel a[aria-current="page"] {
+    .navigation-panel a:hover {
         background-color: rgb(234 242 227 / 14%);
     }
 

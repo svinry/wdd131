@@ -4,9 +4,10 @@
     --color-white: #fffdf8;
     --color-blush: #edafb8;
     --color-green: #256344;
+    --color-green-text: #194f34;
     --color-green-bright: #43b93b;
     --color-red: #a10c32;
-    --color-muted: #58645b;
+    --color-muted: #3f4941;
     --color-line: rgb(45 45 42 / 18%);
     --shadow-card: 0 0.8rem 2rem rgb(28 37 28 / 12%);
     --font-body: "Arimo", Arial, sans-serif;
@@ -42,12 +43,12 @@ body.home-page {
     background-attachment: fixed;
 }
 
-.page-shell {
+.layout {
     display: grid;
     grid-template-rows: auto minmax(0, 1fr) auto;
 }
 
-.page-shell:not(.home-page) {
+.layout:not(.home-page) {
     grid-template-rows: auto auto minmax(0, 1fr) auto;
 }
 
@@ -67,7 +68,7 @@ body.home-page {
     text-decoration: none;
 }
 
-.brand-mark {
+.logo {
     display: grid;
     width: 2.8rem;
     aspect-ratio: 1;
@@ -92,7 +93,7 @@ body.home-page {
 
 .brand-name span,
 .footer-brand span {
-    color: var(--color-green);
+    color: var(--color-green-text);
     font-family: var(--font-body);
     font-size: 0.72rem;
     font-weight: 700;
@@ -126,14 +127,6 @@ body.home-page {
     text-decoration: none;
 }
 
-.nav-home[aria-current="page"]::after {
-    content: " · current";
-    color: var(--color-blush);
-    font-family: var(--font-body);
-    font-size: 0.72rem;
-    font-weight: 400;
-}
-
 .menu-toggle {
     display: flex;
     width: 2.75rem;
@@ -155,15 +148,15 @@ body.home-page {
     transition: transform 180ms ease, opacity 180ms ease;
 }
 
-.menu-toggle[aria-expanded="true"] span:first-child {
+.menu-toggle.is-open span:first-child {
     transform: translateY(0.38rem) rotate(45deg);
 }
 
-.menu-toggle[aria-expanded="true"] span:nth-child(2) {
+.menu-toggle.is-open span:nth-child(2) {
     opacity: 0;
 }
 
-.menu-toggle[aria-expanded="true"] span:last-child {
+.menu-toggle.is-open span:last-child {
     transform: translateY(-0.38rem) rotate(-45deg);
 }
 
@@ -198,8 +191,7 @@ body.home-page {
     text-decoration: none;
 }
 
-.navigation-panel a:hover,
-.navigation-panel a[aria-current="page"] {
+.navigation-panel a:hover {
     border-radius: 0.25rem;
     background-color: rgb(234 242 227 / 13%);
     color: var(--color-blush);
@@ -232,7 +224,7 @@ body.home-page {
 }
 
 .eyebrow-dark {
-    color: var(--color-green);
+    color: var(--color-green-text);
 }
 
 .home-hero h1,
@@ -304,22 +296,6 @@ body.home-page {
     font-size: 0.83rem;
 }
 
-.hero-scroll {
-    position: absolute;
-    bottom: 1rem;
-    left: 50%;
-    display: grid;
-    width: 2.5rem;
-    height: 2.5rem;
-    place-items: center;
-    border: 1px solid rgb(255 253 248 / 76%);
-    border-radius: 50%;
-    color: var(--color-white);
-    font-size: 1.5rem;
-    text-decoration: none;
-    transform: translateX(-50%);
-}
-
 .home-content {
     background-color: var(--color-paper);
 }
@@ -351,7 +327,7 @@ body.home-page {
 }
 
 .text-link {
-    color: var(--color-green);
+    color: var(--color-green-text);
     font-weight: 700;
     text-underline-offset: 0.2em;
 }
@@ -540,7 +516,7 @@ body.home-page {
 
 .planning-inner p:not(.eyebrow) {
     max-width: 52rem;
-    color: rgb(255 253 248 / 88%);
+    color: var(--color-white);
 }
 
 .site-footer {
@@ -617,11 +593,6 @@ body.home-page {
     font-size: 1.03rem;
 }
 
-.page-intro .source-note {
-    margin-top: 0.85rem;
-    font-size: 0.9rem !important;
-}
-
 .activity-browser {
     padding-block: 0.5rem 4rem;
 }
@@ -649,7 +620,7 @@ body.home-page {
     border: 1px solid var(--color-green);
     border-radius: 2rem;
     background-color: transparent;
-    color: var(--color-green);
+    color: var(--color-green-text);
     font: 700 0.82rem var(--font-body);
     cursor: pointer;
 }
@@ -703,7 +674,7 @@ body.home-page {
 }
 
 .activity-category {
-    color: var(--color-green);
+    color: var(--color-green-text);
     font-size: 0.7rem;
     font-weight: 700;
     letter-spacing: 0.12em;
@@ -722,13 +693,6 @@ body.home-page {
     font-size: 0.92rem;
 }
 
-.activity-card .activity-practical {
-    margin-top: 0.7rem;
-    padding-top: 0.7rem;
-    border-top: 1px solid var(--color-line);
-    font-size: 0.83rem;
-}
-
 .activity-rating {
     display: flex;
     flex-wrap: wrap;
@@ -741,14 +705,14 @@ body.home-page {
 }
 
 .activity-rating .stars {
-    color: #8a5b00;
+    color: #684300;
     letter-spacing: 0.06em;
 }
 
 .review-jump {
     display: inline-block;
     margin-top: 0.85rem;
-    color: var(--color-green);
+    color: var(--color-green-text);
     font-size: 0.87rem;
     font-weight: 700;
     text-underline-offset: 0.2em;
@@ -772,7 +736,7 @@ body.home-page {
 
 .review-intro > p:not(.eyebrow) {
     max-width: 38rem;
-    color: #465047;
+    color: var(--color-muted);
 }
 
 .privacy-note {
@@ -889,7 +853,7 @@ a:focus-visible {
 
 .form-status {
     min-height: 1.5rem;
-    color: var(--color-green);
+    color: var(--color-green-text);
     font-size: 0.88rem;
     font-weight: 700;
 }
