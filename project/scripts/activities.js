@@ -20,7 +20,7 @@ const activities = [
         name: "Scenic flight over the falls",
         category: "tour",
         categoryName: "Tours & river",
-        image: { src: "victoria-falls-arial2.webp", alt: "Victoria Falls Helicopter", width: 925, height: 615 },
+        image: { src: "victoria-falls-arial.jpg", alt: "Victoria Falls Helicopter", width: 463, height: 308 },
         description: "A scenic flight can reveal the waterfall's broad curtain, islands, and deep gorges from above."
     },
     {
@@ -36,7 +36,7 @@ const activities = [
         name: "Gorge & canopy adventures",
         category: "adventure",
         categoryName: "Adventure",
-        image: { src: "victoria-falls-bungee.jpg", alt: "Victoria Falls bungee jumping", width: 1920, height: 870 },
+        image: { src: "victoria-falls-bungee.jpg", alt: "Victoria Falls bungee jumping", width: 576, height: 261 },
         description: "Canopy routes, zip lines, and gorge activities offer elevated views and a more active way to explore the landscape around the falls."
     },
     {
